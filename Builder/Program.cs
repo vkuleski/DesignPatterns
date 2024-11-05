@@ -4,9 +4,9 @@ using Builder;
 using Builder.Builders;
 // var builder = new SimpleProductBuilder();
 var builder = new ComplexProductBuilder();
-var productDirector = new ProductDirector(builder);
+builder.BuildName();
+builder.BuildDescription();
 
-productDirector.ConstructProduct();
 var product = builder.Build();
 
 Console.WriteLine(product);
