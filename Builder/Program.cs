@@ -3,9 +3,9 @@
 using Builder;
 using Builder.Builders;
 
-Product.Builder builder = new();
-builder.BuildName("Simple Product");
-builder.BuildDescription("Simple description");
-var product = builder.Build();
+var product = new Product.Builder()
+    .SetName("Simple Product")
+    .SetDescription("Simple description")
+    .Build();
 
 Console.WriteLine(product);
