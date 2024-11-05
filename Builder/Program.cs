@@ -1,11 +1,16 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Builder;
-using Builder.Builders;
 
-var product = new Product.Builder()
-    .SetName("Simple Product")
-    .SetDescription("Simple description")
+var pizza = new Pizza.Builder()
+    .SetDough(dough=>dough
+        .SetThickness(3)
+        .SetFlour("whole wheat")
+        .Build())
+    .SetSauce("Spicy tomato sauce")
+    .SetCheese("Vegan cheese")
+    .AddToppings("Olives")
+    .AddToppings("Onions")
     .Build();
 
-Console.WriteLine(product);
+Console.WriteLine(pizza);
