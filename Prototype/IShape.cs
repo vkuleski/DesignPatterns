@@ -1,6 +1,6 @@
 namespace Prototype;
 
-public interface IShape : IPrototype
+public interface IShape : IPrototype<IShape>
 {
     
 }

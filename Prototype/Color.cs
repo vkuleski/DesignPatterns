@@ -1,8 +1,8 @@
 namespace Prototype;
 
-public class Color(ushort red, ushort green, ushort blue) : IPrototype
+public class Color(ushort red, ushort green, ushort blue) : IPrototype<Color>
 {
 
     public static Color LightGray => new(217, 217, 127);
-    public IPrototype Clone() => new Color(red, green, blue);
+    public Color Clone() => new Color(red, green, blue);
 }

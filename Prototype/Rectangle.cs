@@ -2,8 +2,8 @@ namespace Prototype;
 
 public class Rectangle(int width, int height, Color color) : IShape
 {
-    public IPrototype Clone()
+    public IShape Clone()
     {
-        return new Rectangle(width, height, color);
+        return new Rectangle(width, height, color.Clone());
     }
 }
