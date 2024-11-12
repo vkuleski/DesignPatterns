@@ -13,6 +13,6 @@ public class ComplexProductBuilder : IBuilder
     {
         _description = "This is a complex product";
     }
-    public Product Build() => new Product(Name: _name, Description: _description);
     
+    public Product Build() => new Product(Name: _name, Description: _description);
 }
