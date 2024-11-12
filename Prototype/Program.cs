@@ -1,11 +1,11 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using Dumpify;
+using Prototype;
 Console.WriteLine("Hello, World!");
 
 
-var person = new Person("John", ["Skiing", "Hiking"]);
-// var shallowCopy = new Person("Jane", ["Swimming", "Running"]);
+var person = Person.Create();
 
 var shallowCopy = person.ShallowClone();
 var deepCopy = person.DeepClone();
@@ -14,16 +14,18 @@ shallowCopy.Hobbies.Add("Reading");
 deepCopy.Hobbies.Add("Biking");
 
 person.Dump();
-internal record Person(string FirstName, List<string> Hobbies)
+
+// canvas
+var rectangle = new Rectangle(width: 100, height: 100, Color.LightGray);
+return;
+
+void CopyDrag(IShape shape)
 {
-    public Person ShallowClone()
+    var newShape = shape.Clone();
+
+    const bool iSMouseDown = true;
+    while (iSMouseDown)
     {
-        return this with
-        {
-        };
-    }
-    public Person DeepClone()
-    {
-        return new(FirstName, [..Hobbies]);
+        //draw new shape to current location
     }
 }
